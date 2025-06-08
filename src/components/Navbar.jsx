@@ -2,16 +2,16 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav className="bg-orange-500 p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-linear-to-t from-orange-500 to-orange-300  p-4">
+      <div className="container mx-auto flex">
         <div className="container mx-auto flex items-center">
           <img src="/public/pic/logoSC.png" alt="" className="h-17" />
           <a href="#" className="text-white text-2xl font-semibold">
             KMITL SC
           </a>
         </div>
-        <div className="container mx-auto flex items-center">
-          <ul className="flex space-x-4">
+        <div className="container flex items-center justify-end">
+          <ul className="flex space-x-12">
             <li>
               <a href="#" className="text-white">
                 Home
