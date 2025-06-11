@@ -15,7 +15,7 @@ function InfoTwo() {
         <img
           src="/public/pic/SC2.JPG"
           alt=""
-          className="w-full h-auto rounded-lg"
+          className="w-full h-auto rounded-lg px-6"
         />
       </div>
     </div>

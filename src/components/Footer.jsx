@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className='bg-orange-500 text-whie p-4' >
         <div className="container mx-auto text-center">
-            <p>&copy: kdlsfksnvsjdhfjoiw;elm</p>
+            <p>@King Mongkut's Institute of Technology Ladkrabang</p>
         </div>
     </footer>
   )

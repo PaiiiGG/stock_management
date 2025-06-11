@@ -1,17 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Navbar() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const sidebarRef = useRef(null)
+
+  useEffect(() => {
+    const closeSideBar = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsMenuOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", closeSideBar)
+    return () => { document.removeEventListener("mousedown", closeSideBar) }
+  }, [])
+
+
   return (
-    <nav className="bg-linear-to-t from-orange-500 to-orange-300  p-4">
-      <div className="container mx-auto flex">
-        <div className="container mx-auto flex items-center">
-          <img src="/public/pic/logoSC.png" alt="" className="h-17" />
-          <a href="#" className="text-white text-2xl font-semibold">
-            KMITL SC
-          </a>
+    <>
+      <nav className="w-full min-h-[500px] max-h-96 bg-cover bg-[url('/public/pic/img_1.jpg')]">
+        {/* <img src="/public/pic/img_1.jpg" alt="" className="w-full h-full object-cover absolute mix-blend-overlay" /> */}
+        <div className="container flex">
+  
+          {/* onclick menu */}
+          <div className="container flex items-center p-6 relative">
+            <button id="main-toggle" className="h-10 w-10" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <img src="/public/pic/b-menu.png" alt=""/>
+            </button>
+            <img src="/public/pic/logoSC.png" alt="" className="h-30" />
+          </div>
         </div>
-        <div className="container flex items-center justify-end">
-          <ul className="flex space-x-12">
+      </nav>
+
+      {isMenuOpen === true &&
+        <div className="top-0 backdrop-blur-[4px] h-screen w-xs bg-black/50 fixed z-100" ref={sidebarRef}>
+          <ul className="container h-full flex flex-col items-start gap-5 p-7">
             <li>
               <a href="#" className="text-white">
                 Home
@@ -34,8 +57,9 @@ function Navbar() {
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      }
+
+    </>
   );
 }
 

@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/home'
+import Contract from './pages/contract'
+
 
 //components
-import Navbar from './components/navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import InfoOne from './components/InfoOne'
-import InfoTwo from './components/InfoTwo'
-import CTA from './components/CTA'
-import Testimonials from './components/Testimonials'
-import GetinTouch from './components/GetinTouch'
-import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <InfoOne/>
-      <InfoTwo/>
-      <CTA/>
-      <Testimonials/>
-      <GetinTouch/>
-      <Footer/>
-    </>
-  )
+ return(
+  <Router>
+    <Routes>
+      <Route path='/Home' element={<Home/>}/>
+      <Route path='/Contract' element={<Contract/>}/>
+    </Routes>
+  </Router>
+ )
 }
 
 export default App

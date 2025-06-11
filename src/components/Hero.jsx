@@ -4,8 +4,8 @@ function Hero() {
   return (
     <div className="bg-gray-900 text-white py-16">
       <div className="container mx-auto text-center">
-        <h1 className="text-5xl font-extrabold">welcome to SC Kmitl</h1>
-        <p className="text-lg mt-4">
+        <h1 className="px-5 text-5xl font-extrabold">welcome to Kmitl SC</h1>
+        <p className="px-5 text-lg mt-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, sint?
         </p>
         <a
