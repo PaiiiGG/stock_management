@@ -1,10 +1,13 @@
 import { useState } from "react"
 
+//component
+import Navbar from "../components/navbar"
+
 export function Contract() {
   return (
-    <div>
-      <h1>Contract page</h1>
-    </div>
+    <>
+      <Navbar/>
+    </>
   )
 }
 

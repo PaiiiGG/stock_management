@@ -18,8 +18,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="w-full min-h-[500px] max-h-96 bg-cover bg-[url('/public/pic/img_1.jpg')]">
-        {/* <img src="/public/pic/img_1.jpg" alt="" className="w-full h-full object-cover absolute mix-blend-overlay" /> */}
+      <nav className="w-full">
         <div className="container flex">
   
           {/* onclick menu */}
@@ -36,22 +35,22 @@ function Navbar() {
         <div className="top-0 backdrop-blur-[4px] h-screen w-xs bg-black/50 fixed z-100" ref={sidebarRef}>
           <ul className="container h-full flex flex-col items-start gap-5 p-7">
             <li>
-              <a href="#" className="text-white">
+              <a href="#/home" className="text-white">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <a href="#/contract" className="text-white">
                 Contact
               </a>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <a href="#/support" className="text-white">
                 Support
               </a>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <a href="#/about us" className="text-white">
                 About us
               </a>
             </li>
